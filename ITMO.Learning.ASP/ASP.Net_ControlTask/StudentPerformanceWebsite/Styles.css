@@ -1,0 +1,119 @@
+﻿/*#page {
+    width: 100%;
+    
+}*/
+body {
+    background-color: #eee2dc;
+}
+
+header {
+    overflow: hidden;
+}
+
+nav {
+    list-style: none;
+    font-family: 'Montserrat', sans-serif;
+    /*background-color: #eec7b7;*/
+    /*     Для выравнивания меню по центру
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;*/
+}
+
+.main-menu {
+    margin: 0;
+}
+
+    /*Расположение элементов по горизонтальной оси*/
+    .main-menu > li {
+        display: inline-flex;
+    }
+        /*Отступы между элементами*/
+        .main-menu > li + li {
+            margin-left: 20px;
+        }
+        /*Стилизация текста*/
+        .main-menu > li > a {
+            padding: 0 0 15px 0;
+            position: relative;
+            text-transform: uppercase;
+            color: #000;
+            font-weight: bold;
+            letter-spacing: 0.2px;
+            font-size: 15px;
+            text-decoration: none;
+        }
+            /*Изменение цвета текста при наведение*/
+            .main-menu > li > a:hover {
+                text-decoration: none;
+                color: #337AB7;
+            }
+            /*Плавное появление полосы под текстом*/
+            .main-menu > li > a:after {
+                width: 0;
+                height: 3px;
+                background-color: #337AB7;
+                content: '';
+                left: 0;
+                bottom: 10px;
+                position: absolute;
+                transition: all .3s;
+            }
+
+            .main-menu > li > a:hover::after {
+                width: 100%;
+            }
+
+/*section {
+    height: 200px;
+    width: 70%;
+    float: left;
+    padding: 5px;
+}*/
+.line {
+    height: 5px;
+    width: 100%;
+    background-color: #edc7b7;
+}
+table.StudentsTable {
+    font-family: "Times New Roman", Times, serif;
+    border: 3px solid #123c69;
+    background-color: #EDC7B7;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+    table.StudentsTable td, table.StudentsTable th {
+        border: 2px solid #948473;
+        padding: 2px 4px;
+    }
+
+    table.StudentsTable tbody td {
+        font-size: 14px;
+    }
+
+    table.StudentsTable thead {
+        background: #948473;
+        background: -moz-linear-gradient(top, #afa396 0%, #9e9081 66%, #948473 100%);
+        background: -webkit-linear-gradient(top, #afa396 0%, #9e9081 66%, #948473 100%);
+        background: linear-gradient(to bottom, #afa396 0%, #9e9081 66%, #948473 100%);
+    }
+
+        table.StudentsTable thead th {
+            font-size: 18px;
+            font-weight: bold;
+            color: #F0F0F0;
+            text-align: center;
+            width: 5%;
+        }
+
+        table.StudentsTable > tbody > tr:hover {
+            background: #eee2dc;
+        }
+
+footer {
+    background-color: #bab2b5;
+    clear: both;
+    text-align: right;
+    padding: 5px;
+}

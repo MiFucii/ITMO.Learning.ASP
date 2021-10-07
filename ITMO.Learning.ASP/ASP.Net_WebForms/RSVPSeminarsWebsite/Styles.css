@@ -1,0 +1,80 @@
+﻿h1 {
+    margin: 0px;
+    padding: 2px 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#form1 label {
+    width: 120px;
+    display: inline-block;
+}
+
+#form1 input {
+    margin-left: 4px;
+    margin-right: 2px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+#form1 select {
+    margin: 2px 0;
+    width: 154px;
+}
+
+button[type=submit] {
+    margin-top: 15px;
+    padding: 5px;
+    width: 100%;
+    text-align:center;
+}
+table, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+    background-color: lemonchiffon;
+    text-align: left;
+    margin: 10px;
+}
+th {
+    text-align: center;
+}
+.DisplayNumFromTable {
+    text-align: center;
+    font-size: 18px;
+    color: yellow;
+    
+}
+.footer {
+    font-size: 18px;
+    text-align: left;
+}
+.menu {
+    text-decoration: none;
+}
+#mainTable {
+    width: 100%;
+    border-collapse:collapse;
+}
+.menuTable {
+    font-size: 24px;
+    text-align: center;
+    color: black;
+    width: 10%;
+    border: none;
+    table-layout: fixed;
+    cursor:pointer;
+}
+
+.menuTable:hover{
+    background-color: #f9fafb;
+}
+
+.RegistrationTable {
+    width:100%;
+    border-collapse: collapse;
+    border: 1px solid lemonchiffon;
+}
+.RegistrationTable > tbody > tr > td  {
+    border: 1px solid lemonchiffon;
+}

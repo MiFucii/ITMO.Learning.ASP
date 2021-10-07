@@ -1,0 +1,38 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="StudentPerformanceWebsite.Default" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="Styles.css" />
+    <title></title>
+</head>
+<body>
+    <form id="form" runat="server">
+        <div id="page">
+            <header><h1>Электронный журнал успеваемости группы 421</h1>  
+            <nav>
+                
+                <ul class="main-menu">
+                    <li><a href="Index.aspx">Главная</a></li>      
+                    <li><a href="Best5.aspx">5-ка лучших</a></li>
+                    <li><a href="Worse5.aspx">5-ка худших</a></li>
+                    <li><a href="Edit.aspx">Редактирование</a></li>
+                </ul>
+            </nav>
+</header>  
+            <div class ="line"></div>
+            <section>
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder" runat="server">
+                </asp:ContentPlaceHolder>
+            </section>
+            <br />
+            <footer>
+                Copyright © 2021 - <%=DateTime.Now.Year%> BearlogaSoft
+            </footer>
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,54 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Default.master.cs" Inherits="RSVPSeminarsWebsite.Default" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="Styles.css" />
+    <title></title>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table id="mainTable">
+                <tr>
+                    <td colspan="2">
+
+                        <div>
+                            <asp:ScriptManager ID="ScriptManager" runat="server">
+                            </asp:ScriptManager>
+                            <asp:UpdatePanel ID="UpdatePanel" runat="server">
+                                <ContentTemplate>
+                                    <asp:Timer ID="Timer" runat="server" Interval="60000"></asp:Timer>
+                                    <h2>Приглашение на симинар который начнется через <%=GetTimeStartSeminars() %></h2>
+                                </ContentTemplate>
+                            </asp:UpdatePanel>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="menuTable" onclick="document.location='Index.aspx'">Главная</td>
+                    <td rowspan="3" style="width: 90%">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolderMain" runat="server"></asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="menuTable" onclick="document.location='Members.aspx'">Участники</td>
+                </tr>
+                <tr>
+                    <td class="menuTable"  onclick="document.location='About.aspx'">Информация</td>
+                </tr>
+                <tr>
+                    <td style="width: 20%; border-right:none;">
+                        <div class="footer">
+                            <asp:Literal ID="VisitorLiteral" runat="server" />
+                        </div>
+                    </td>
+                    <td style="text-align: right; border-left:none"><code>Version 1.0 © BearlogaSoft</code></td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>

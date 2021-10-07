@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Хранилище StudentPerformanceModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="t_Group421">
+          <Key>
+            <PropertyRef Name="Email" />
+          </Key>
+          <Property Name="Email" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="BasicsProgramingСourse" Type="tinyint" />
+          <Property Name="C#Сourse" Type="tinyint" />
+          <Property Name="AspNetСourse" Type="tinyint" />
+          <Property Name="AdoNetСourse" Type="tinyint" />
+          <Property Name="JavaСourse" Type="tinyint" />
+          <Property Name="PythonСourse" Type="tinyint" />
+          <Property Name="WebСourse" Type="tinyint" />
+          <Property Name="FinalGrade" Type="decimal" Precision="3" Scale="2" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "AspStudentsControlTask.dbo.View_BestStudents" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="View_BestStudents">
+          <Key>
+            <PropertyRef Name="Email" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="LastName" />
+          </Key>
+          <Property Name="Email" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="BasicsProgramingСourse" Type="tinyint" />
+          <Property Name="C#Сourse" Type="tinyint" />
+          <Property Name="AspNetСourse" Type="tinyint" />
+          <Property Name="AdoNetСourse" Type="tinyint" />
+          <Property Name="JavaСourse" Type="tinyint" />
+          <Property Name="PythonСourse" Type="tinyint" />
+          <Property Name="WebСourse" Type="tinyint" />
+          <Property Name="FinalGrade" Type="decimal" Precision="3" Scale="2" />
+        </EntityType>
+        <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "AspStudentsControlTask.dbo.View_WorseStudents" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+        <EntityType Name="View_WorseStudents">
+          <Key>
+            <PropertyRef Name="Email" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="LastName" />
+          </Key>
+          <Property Name="Email" Type="nchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="BasicsProgramingСourse" Type="tinyint" />
+          <Property Name="C#Сourse" Type="tinyint" />
+          <Property Name="AspNetСourse" Type="tinyint" />
+          <Property Name="AdoNetСourse" Type="tinyint" />
+          <Property Name="JavaСourse" Type="tinyint" />
+          <Property Name="PythonСourse" Type="tinyint" />
+          <Property Name="WebСourse" Type="tinyint" />
+          <Property Name="FinalGrade" Type="decimal" Precision="3" Scale="2" />
+        </EntityType>
+        <EntityContainer Name="Хранилище StudentPerformanceModelContainer">
+          <EntitySet Name="t_Group421" EntityType="Self.t_Group421" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="View_BestStudents" EntityType="Self.View_BestStudents" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [View_BestStudents].[Email] AS [Email], 
+    [View_BestStudents].[Name] AS [Name], 
+    [View_BestStudents].[LastName] AS [LastName], 
+    [View_BestStudents].[BasicsProgramingСourse] AS [BasicsProgramingСourse], 
+    [View_BestStudents].[C#Сourse] AS [C#Сourse], 
+    [View_BestStudents].[AspNetСourse] AS [AspNetСourse], 
+    [View_BestStudents].[AdoNetСourse] AS [AdoNetСourse], 
+    [View_BestStudents].[JavaСourse] AS [JavaСourse], 
+    [View_BestStudents].[PythonСourse] AS [PythonСourse], 
+    [View_BestStudents].[WebСourse] AS [WebСourse], 
+    [View_BestStudents].[FinalGrade] AS [FinalGrade]
+    FROM [dbo].[View_BestStudents] AS [View_BestStudents]</DefiningQuery>
+          </EntitySet>
+          <EntitySet Name="View_WorseStudents" EntityType="Self.View_WorseStudents" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [View_WorseStudents].[Email] AS [Email], 
+    [View_WorseStudents].[Name] AS [Name], 
+    [View_WorseStudents].[LastName] AS [LastName], 
+    [View_WorseStudents].[BasicsProgramingСourse] AS [BasicsProgramingСourse], 
+    [View_WorseStudents].[C#Сourse] AS [C#Сourse], 
+    [View_WorseStudents].[AspNetСourse] AS [AspNetСourse], 
+    [View_WorseStudents].[AdoNetСourse] AS [AdoNetСourse], 
+    [View_WorseStudents].[JavaСourse] AS [JavaСourse], 
+    [View_WorseStudents].[PythonСourse] AS [PythonСourse], 
+    [View_WorseStudents].[WebСourse] AS [WebСourse], 
+    [View_WorseStudents].[FinalGrade] AS [FinalGrade]
+    FROM [dbo].[View_WorseStudents] AS [View_WorseStudents]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="StudentPerformanceModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="t_Group421">
+          <Key>
+            <PropertyRef Name="Email" />
+          </Key>
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BasicsProgramingСourse" Type="Byte" />
+          <Property Name="C_Сourse" Type="Byte" />
+          <Property Name="AspNetСourse" Type="Byte" />
+          <Property Name="AdoNetСourse" Type="Byte" />
+          <Property Name="JavaСourse" Type="Byte" />
+          <Property Name="PythonСourse" Type="Byte" />
+          <Property Name="WebСourse" Type="Byte" />
+          <Property Name="FinalGrade" Type="Decimal" Precision="3" Scale="2" />
+        </EntityType>
+        <EntityType Name="View_BestStudents">
+          <Key>
+            <PropertyRef Name="Email" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="LastName" />
+          </Key>
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BasicsProgramingСourse" Type="Byte" />
+          <Property Name="C_Сourse" Type="Byte" />
+          <Property Name="AspNetСourse" Type="Byte" />
+          <Property Name="AdoNetСourse" Type="Byte" />
+          <Property Name="JavaСourse" Type="Byte" />
+          <Property Name="PythonСourse" Type="Byte" />
+          <Property Name="WebСourse" Type="Byte" />
+          <Property Name="FinalGrade" Type="Decimal" Precision="3" Scale="2" />
+        </EntityType>
+        <EntityType Name="View_WorseStudents">
+          <Key>
+            <PropertyRef Name="Email" />
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="LastName" />
+          </Key>
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="true" Unicode="true" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="BasicsProgramingСourse" Type="Byte" />
+          <Property Name="C_Сourse" Type="Byte" />
+          <Property Name="AspNetСourse" Type="Byte" />
+          <Property Name="AdoNetСourse" Type="Byte" />
+          <Property Name="JavaСourse" Type="Byte" />
+          <Property Name="PythonСourse" Type="Byte" />
+          <Property Name="WebСourse" Type="Byte" />
+          <Property Name="FinalGrade" Type="Decimal" Precision="3" Scale="2" />
+        </EntityType>
+        <EntityContainer Name="Students" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="t_Group421" EntityType="Self.t_Group421" />
+          <EntitySet Name="View_BestStudents" EntityType="Self.View_BestStudents" />
+          <EntitySet Name="View_WorseStudents" EntityType="Self.View_WorseStudents" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Хранилище StudentPerformanceModelContainer" CdmEntityContainer="Students">
+          <EntitySetMapping Name="t_Group421">
+            <EntityTypeMapping TypeName="StudentPerformanceModel.t_Group421">
+              <MappingFragment StoreEntitySet="t_Group421">
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="BasicsProgramingСourse" ColumnName="BasicsProgramingСourse" />
+                <ScalarProperty Name="C_Сourse" ColumnName="C#Сourse" />
+                <ScalarProperty Name="AspNetСourse" ColumnName="AspNetСourse" />
+                <ScalarProperty Name="AdoNetСourse" ColumnName="AdoNetСourse" />
+                <ScalarProperty Name="JavaСourse" ColumnName="JavaСourse" />
+                <ScalarProperty Name="PythonСourse" ColumnName="PythonСourse" />
+                <ScalarProperty Name="WebСourse" ColumnName="WebСourse" />
+                <ScalarProperty Name="FinalGrade" ColumnName="FinalGrade" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_BestStudents">
+            <EntityTypeMapping TypeName="StudentPerformanceModel.View_BestStudents">
+              <MappingFragment StoreEntitySet="View_BestStudents">
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="BasicsProgramingСourse" ColumnName="BasicsProgramingСourse" />
+                <ScalarProperty Name="C_Сourse" ColumnName="C#Сourse" />
+                <ScalarProperty Name="AspNetСourse" ColumnName="AspNetСourse" />
+                <ScalarProperty Name="AdoNetСourse" ColumnName="AdoNetСourse" />
+                <ScalarProperty Name="JavaСourse" ColumnName="JavaСourse" />
+                <ScalarProperty Name="PythonСourse" ColumnName="PythonСourse" />
+                <ScalarProperty Name="WebСourse" ColumnName="WebСourse" />
+                <ScalarProperty Name="FinalGrade" ColumnName="FinalGrade" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="View_WorseStudents">
+            <EntityTypeMapping TypeName="StudentPerformanceModel.View_WorseStudents">
+              <MappingFragment StoreEntitySet="View_WorseStudents">
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="BasicsProgramingСourse" ColumnName="BasicsProgramingСourse" />
+                <ScalarProperty Name="C_Сourse" ColumnName="C#Сourse" />
+                <ScalarProperty Name="AspNetСourse" ColumnName="AspNetСourse" />
+                <ScalarProperty Name="AdoNetСourse" ColumnName="AdoNetСourse" />
+                <ScalarProperty Name="JavaСourse" ColumnName="JavaСourse" />
+                <ScalarProperty Name="PythonСourse" ColumnName="PythonСourse" />
+                <ScalarProperty Name="WebСourse" ColumnName="WebСourse" />
+                <ScalarProperty Name="FinalGrade" ColumnName="FinalGrade" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Нет" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
